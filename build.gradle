@@ -1,0 +1,15 @@
+plugins {
+    id "war"
+    id "org.springframework.boot" version "1.5.7.RELEASE"
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile "org.joinfaces:jsf-spring-boot-starter:2.4.0"
+    providedRuntime "org.springframework.boot:spring-boot-starter-tomcat"
+
+    testCompile "org.springframework.boot:spring-boot-starter-test"
+}
