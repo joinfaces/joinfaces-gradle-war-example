@@ -1,0 +1,22 @@
+language: java
+jdk: oraclejdk8
+
+env:
+- TOMCAT_VERSION=8.5.20
+- TOMCAT_VERSION=8.0.41
+
+install:
+- ./gradlew clean
+- wget http://archive.apache.org/dist/tomcat/tomcat-8/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.zip
+- unzip apache-tomcat-$TOMCAT_VERSION.zip
+- chmod a+x apache-tomcat-$TOMCAT_VERSION/bin/*.sh
+- apache-tomcat-$TOMCAT_VERSION/bin/catalina.sh start
+
+script:
+- ./gradlew build
+- cp build/libs/joinfaces-gradle-war-example.war apache-tomcat-$TOMCAT_VERSION/webapps/
+- timeout --preserve-status 60s tail -f apache-tomcat-$TOMCAT_VERSION/logs/catalina.out || true
+- wget localhost:8080/joinfaces-gradle-war-example/index.xhtml
+- grep "Hello from Spring" index.xhtml
+
+
