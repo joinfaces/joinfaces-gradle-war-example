@@ -1,5 +1,6 @@
-# joinfaces-gradle-war-example
-JoinFaces Gradle War Example
+# JoinFaces Gradle War Example
+
+[![Build Status](https://travis-ci.org/joinfaces/joinfaces-gradle-war-example.svg?branch=master)](https://travis-ci.org/joinfaces/joinfaces-gradle-war-example)
 
 Usages:
   - Can be deployed to an existing Tomcat (see Travis tests)
