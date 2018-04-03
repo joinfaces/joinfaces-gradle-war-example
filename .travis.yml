@@ -2,8 +2,8 @@ language: java
 jdk: oraclejdk8
 
 env:
-- TOMCAT_VERSION=8.5.23
-- TOMCAT_VERSION=8.0.47
+- TOMCAT_VERSION=8.5.29
+- TOMCAT_VERSION=8.0.50
 
 install:
 - ./gradlew clean
