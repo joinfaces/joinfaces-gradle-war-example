@@ -23,7 +23,7 @@ dependencyManagement {
 
 dependencies {
     compile "org.joinfaces:jsf-spring-boot-starter"
-    providedRuntime "org.springframework.boot:spring-boot-starter-tomcat"
+    providedRuntime "org.joinfaces:tomcat-spring-boot-starter"
 
     testCompile "org.springframework.boot:spring-boot-starter-test"
 }
