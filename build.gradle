@@ -1,24 +1,12 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.0.RELEASE")
-    }
+plugins {
+    id "org.joinfaces" version "3.3.0-rc5"
 }
-
 apply plugin: 'war'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 repositories {
     mavenCentral()
-}
-
-dependencyManagement {
-    imports {
-        mavenBom "org.joinfaces:joinfaces-dependencies:3.3.0-rc2"
-    }
 }
 
 dependencies {
