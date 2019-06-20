@@ -5,7 +5,7 @@ jdk:
 
 env:
 - TOMCAT_VERSION=8.5.29
-- TOMCAT_VERSION=9.0.12
+- TOMCAT_VERSION=9.0.20
 
 install:
 - ./gradlew clean
