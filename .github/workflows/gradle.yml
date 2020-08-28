@@ -32,7 +32,7 @@ jobs:
       fail-fast: false
       matrix:
         java: [8, 11, 14]
-        tomcat: [9.0.30, 8.5.30]
+        tomcat: [9.0.37, 8.5.57]
     env: 
       TOMCAT_VERSION: ${{ matrix.tomcat }}
 
