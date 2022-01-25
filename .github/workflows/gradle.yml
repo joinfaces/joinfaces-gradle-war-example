@@ -46,7 +46,7 @@ jobs:
           java-version: ${{ matrix.java }}
       - name: Prepare Tomcat ${{ matrix.tomcat }}
         run: |
-          wget https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_VERSION:0:1}/v${{ matrix.tomcat }}/bin/apache-tomcat-${{ matrix.tomcat }}.zip
+          wget https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_VERSION:0:2}/v${{ matrix.tomcat }}/bin/apache-tomcat-${{ matrix.tomcat }}.zip
           unzip apache-tomcat-${{ matrix.tomcat }}.zip
           chmod a+x apache-tomcat-${{ matrix.tomcat }}/bin/*.sh
           apache-tomcat-${{ matrix.tomcat }}/bin/catalina.sh start
