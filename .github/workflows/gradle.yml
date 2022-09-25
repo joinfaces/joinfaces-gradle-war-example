@@ -23,7 +23,7 @@ jobs:
           distribution: 'temurin'
           java-version: ${{ matrix.java }}
       - name: Build with Gradle
-        run: ./gradlew build --no-daemon
+        run: ./gradlew -V build
 
   deploy-to-tomcat:
 
@@ -51,7 +51,7 @@ jobs:
           chmod a+x apache-tomcat-${{ matrix.tomcat }}/bin/*.sh
           apache-tomcat-${{ matrix.tomcat }}/bin/catalina.sh start
       - name: Build with Gradle
-        run: ./gradlew bootWar --no-daemon
+        run: ./gradlew -V bootWar
       - name: Deploy to Tomcat
         run: cp build/libs/joinfaces-gradle-war-example.war apache-tomcat-${{ matrix.tomcat }}/webapps/
       - name: Verify Deployment
