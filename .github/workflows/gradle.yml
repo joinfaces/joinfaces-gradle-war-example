@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        java: [8, 11, 17]
+        java: [17, 19]
 
     steps:
       - uses: actions/checkout@v2
@@ -32,8 +32,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        java: [8, 11, 17]
-        tomcat: [9.0.55, 8.5.73]
+        java: [17, 19]
+        tomcat: [10.1.2]
     env: 
       TOMCAT_VERSION: ${{ matrix.tomcat }}
 
@@ -46,7 +46,7 @@ jobs:
           java-version: ${{ matrix.java }}
       - name: Prepare Tomcat ${{ matrix.tomcat }}
         run: |
-          wget https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_VERSION:0:1}/v${{ matrix.tomcat }}/bin/apache-tomcat-${{ matrix.tomcat }}.zip
+          wget https://archive.apache.org/dist/tomcat/tomcat-10/v${{ matrix.tomcat }}/bin/apache-tomcat-${{ matrix.tomcat }}.zip
           unzip apache-tomcat-${{ matrix.tomcat }}.zip
           chmod a+x apache-tomcat-${{ matrix.tomcat }}/bin/*.sh
           apache-tomcat-${{ matrix.tomcat }}/bin/catalina.sh start
