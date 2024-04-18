@@ -14,8 +14,8 @@ repositories {
 }
 
 dependencies {
-    implementation platform('org.joinfaces:joinfaces-platform:5.2.4')
-    providedRuntime platform('org.joinfaces:joinfaces-platform:5.2.4')
+    implementation platform('org.joinfaces:joinfaces-platform:5.2.5')
+    providedRuntime platform('org.joinfaces:joinfaces-platform:5.2.5')
 
     implementation "org.joinfaces:faces-spring-boot-starter"
     providedRuntime "org.springframework.boot:spring-boot-starter-tomcat"
