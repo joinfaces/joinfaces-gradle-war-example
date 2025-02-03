@@ -1,6 +1,6 @@
 plugins {
     id 'war'
-    id 'org.springframework.boot' version '3.4.1'
+    id 'org.springframework.boot' version '3.4.2'
 }
 
 java {
@@ -14,8 +14,8 @@ repositories {
 }
 
 dependencies {
-    implementation platform('org.joinfaces:joinfaces-platform:5.4.1')
-    providedRuntime platform('org.joinfaces:joinfaces-platform:5.4.1')
+    implementation platform('org.joinfaces:joinfaces-platform:5.4.2')
+    providedRuntime platform('org.joinfaces:joinfaces-platform:5.4.2')
 
     implementation "org.joinfaces:faces-spring-boot-starter"
     providedRuntime "org.springframework.boot:spring-boot-starter-tomcat"
