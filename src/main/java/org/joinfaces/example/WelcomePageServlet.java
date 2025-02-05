@@ -17,7 +17,7 @@ public class WelcomePageServlet extends GenericServlet {
     @Override
     public void service(ServletRequest req, ServletResponse res) throws IOException {
         if (res instanceof HttpServletResponse httpServletResponse) {
-            httpServletResponse.sendRedirect("/index.xhtml");
+            httpServletResponse.sendRedirect(req.getServletContext().getContextPath() + "/index.xhtml");
         }
     }
 }
