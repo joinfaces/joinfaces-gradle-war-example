@@ -37,8 +37,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        java: [ 17, 21 ]
-        tomcat: [ 10.1.2, 10.1.13 ]
+        java: [ 17, 25 ]
+        tomcat: [ 10.1.50, 11.0.15 ]
     env:
       TOMCAT_VERSION: ${{ matrix.tomcat }}
 
