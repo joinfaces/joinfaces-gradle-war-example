@@ -18,7 +18,7 @@ dependencies {
     providedRuntime platform('org.joinfaces:joinfaces-platform:6.0.0')
 
     implementation "org.joinfaces:faces-spring-boot-starter"
-    providedRuntime "org.springframework.boot:spring-boot-starter-tomcat"
+    providedRuntime "org.springframework.boot:spring-boot-starter-tomcat-runtime"
 
     testImplementation "org.springframework.boot:spring-boot-starter-test"
     testImplementation "org.springframework.boot:spring-boot-resttestclient"
