@@ -1,6 +1,6 @@
 plugins {
     id 'war'
-    id 'org.springframework.boot' version '4.0.0'
+    id 'org.springframework.boot' version '4.0.2'
 }
 
 java {
