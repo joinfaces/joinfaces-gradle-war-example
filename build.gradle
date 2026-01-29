@@ -21,6 +21,7 @@ dependencies {
     providedRuntime "org.springframework.boot:spring-boot-starter-tomcat-runtime"
 
     testImplementation "org.springframework.boot:spring-boot-starter-test"
+    testImplementation "org.springframework.boot:spring-boot-starter-restclient"
     testImplementation "org.springframework.boot:spring-boot-resttestclient"
 }
 
